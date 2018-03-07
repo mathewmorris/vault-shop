@@ -1,0 +1,62 @@
+<style>
+    .menu-wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+    }
+
+    .menu-wrapper li a {
+        padding: 0.5em 1em;
+        color: black;
+        border: 1px solid black;
+        transition: all 0.2s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        width: 11em;
+        margin: 0.5em;
+    }
+    .menu-wrapper li a:hover {
+        color: white;
+        background: black;
+    }
+
+    .menu-wrapper li a.active {
+        background: black;
+        color: white;
+        cursor: default;
+    }
+
+    @media screen and (max-width: 540px) {
+        .menu-wrapper {
+            flex-direction: column;
+        }
+    }
+
+</style>
+
+<hr>
+<div>
+    <ul class="menu-wrapper">
+        <li>
+            <a class="active" href="http://vaultice.com/products/craft-cocktail-rocks">Craft Cocktail Rocks</a>
+        </li>
+        <li>
+            <a class="" href="http://vaultice.com/products/wearables">Wearables</a>
+        </li>
+        <li>
+            <a class="" href="http://vaultice.com/products/storage-freezers">Storage &amp; Freezers</a>
+        </li>
+        <li>
+            <a class="" href="http://vaultice.com/products/bar-tools-more">Bar Tools &amp; More</a>
+        </li>
+        <li>
+            <a class="" href="http://vaultice.com/products/resources">Resources</a>
+        </li>
+    </ul>
+</div>
+
+
+
