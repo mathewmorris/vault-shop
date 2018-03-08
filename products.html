@@ -3,31 +3,30 @@
 </div>
 <script type="text/javascript">
 
-  var collectionID = '30484725815';
-
-  switch (window.location.pathname) {
-    case '/products/craft-cocktail-rocks':
-      collectionID = '30471323703'
-      break;
-    case '/products/wearables':
-      collectionID = '30471356471'
-      break;
-    case '/products/storage-freezers':
-      collectionID = '31030575159'
-      break;
-    case '/products/bar-tools-more':
-      collectionID = '30471454775'
-      break;
-    case '/products/resources':
-      collectionID = '31031033911'
-      break;
-    default:
-      collectionID = '30484725815';
-
-  }
-
   (function () {
     var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+    var collectionID = '30484725815';
+
+    switch (window.location.pathname) {
+      case '/products/craft-cocktail-rocks':
+        collectionID = '30471323703'
+        break;
+      case '/products/wearables':
+        collectionID = '30471356471'
+        break;
+      case '/products/storage-freezers':
+        collectionID = '31030575159'
+        break;
+      case '/products/bar-tools-more':
+        collectionID = '30471454775'
+        break;
+      case '/products/resources':
+        collectionID = '31031033911'
+        break;
+      default:
+        collectionID = '30484725815';
+    }
+        
     if (window.ShopifyBuy) {
       if (window.ShopifyBuy.UI) {
         ShopifyBuyInit();
