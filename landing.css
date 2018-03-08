@@ -110,6 +110,10 @@
     bottom: 25%;
 }
 
+.ccm-block-page-list-description {
+    display: none;
+}
+
 @media screen and (min-width: 540px) {
     .ccm-block-page-list-pages {
         flex-flow: row wrap;
