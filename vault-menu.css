@@ -29,6 +29,10 @@
         cursor: default;
     }
 
+    .ccm-block-page-list-description {
+        display: none;
+    }
+
     @media screen and (max-width: 540px) {
         .menu-wrapper {
             flex-direction: column;
