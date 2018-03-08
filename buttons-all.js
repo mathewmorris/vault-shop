@@ -2,7 +2,29 @@
     <div id='collection-component-79590a2ffd3'></div>
 </div>
 <script type="text/javascript">
-/*<![CDATA[*/
+
+var collectionID = '30484725815';
+
+switch (window.location.pathname) {
+  case '/products/craft-cocktail-rocks':
+    collectionID = '30471323703'
+    break;
+  case '/products/wearables':
+    collectionID = '30471356471'
+    break;
+  case '/products/storage-freezers':
+    collectionID = '31030575159'
+    break;
+  case '/products/bar-tools-more':
+    collectionID = '30471454775'
+    break;
+  case '/products/resources':
+    collectionID = '31031033911'
+    break;
+  default:
+    collectionID = '30484725815';
+
+}
 
 (function () {
   var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
@@ -33,7 +55,7 @@
 
     ShopifyBuy.UI.onReady(client).then(function (ui) {
       ui.createComponent('collection', {
-        id: 30471323703,
+        id: collectionID,
         node: document.getElementById('collection-component-79590a2ffd3'),
         moneyFormat: '%24%7B%7Bamount%7D%7D',
         options: {
@@ -166,5 +188,4 @@
     });
   }
 })();
-/*]]>*/
 </script>
