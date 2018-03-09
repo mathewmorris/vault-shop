@@ -21,51 +21,37 @@
     transition: all .2s ease-in-out;
 }
 
-.ccm-block-page-list-page-entry:nth-child(1) {
-    order: 1;
-}
-
-.ccm-block-page-list-page-entry:nth-child(2) {
-    order: 2;
-}
-
-.ccm-block-page-list-page-entry:nth-child(3) {
-    order: 3;
-}
-
-.ccm-block-page-list-page-entry:nth-child(4) {
-    order: 4;
-}
-
-.ccm-block-page-list-page-entry:nth-child(5) {
-    order: 5;
-}
-
-.ccm-block-page-list-title {
-    background: #454545;
+.ccm-block-page-list-page-entry .ccm-block-page-list-title {
+    background-color: #454545;
+    background-image: url('http://vaultice.com/application/files/6614/7250/2647/bottom_2.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
     position: relative;
 }
 
 .ccm-block-page-list-page-entry:nth-child(1) .ccm-block-page-list-title {
-    background: url('http://vaultice.com/application/files/6614/7250/2647/bottom_2.jpg') no-repeat;
+    background-image: url('http://vaultice.com/application/files/6614/7250/2647/bottom_2.jpg');
 }
 
-.ccm-block-page-list-page-entry:nth-child(2) .ccm-block-page-list-title {
-    background: url('http://vaultice.com/application/files/7614/7250/2647/bottom_1.jpg') no-repeat;
+.ccm-block-page-list-page-entry:nth-child(2n) .ccm-block-page-list-title {
+    background-image: url('http://vaultice.com/application/files/7614/7250/2647/bottom_1.jpg');
+    background-position: bottom left;
 }
 
-.ccm-block-page-list-page-entry:nth-child(3) .ccm-block-page-list-title {
-    background: url('http://vaultice.com/application/files/7414/7250/3990/roundB_2.jpg') no-repeat;
+.ccm-block-page-list-page-entry:nth-child(3n) .ccm-block-page-list-title {
+    background-image: url('http://vaultice.com/application/files/7414/7250/3990/roundB_2.jpg');
+    background-position: right;
 }
 
-.ccm-block-page-list-page-entry:nth-child(4) .ccm-block-page-list-title {
-    background: url('http://vaultice.com/application/files/8014/7250/3360/prince_bottom.jpg') no-repeat;
+.ccm-block-page-list-page-entry:nth-child(4n) .ccm-block-page-list-title {
+    background-image: url('http://vaultice.com/application/files/8014/7250/3360/prince_bottom.jpg');
+    background-position: left;
 }
 
-.ccm-block-page-list-page-entry:nth-child(5) .ccm-block-page-list-title {
-    background: url('http://vaultice.com/application/files/5014/7250/3361/prince_bottom_1.jpg') no-repeat;
+.ccm-block-page-list-page-entry:nth-child(5n) .ccm-block-page-list-title {
+    background-image: url('http://vaultice.com/application/files/5014/7250/3361/prince_bottom_1.jpg');
+    background-position: bottom right;
 }
 
 .ccm-block-page-list-title:before {
@@ -115,7 +101,7 @@
         flex-flow: row wrap;
         justify-content: space-around;
         padding: 0 2em;
-        max-width: 42em;
+        max-width: 62em;
     }
 
     .ccm-block-page-list-pages .ccm-block-page-list-page-entry {
@@ -123,13 +109,8 @@
         max-width: 48%;
     }
 
-    .ccm-block-page-list-page-entry:nth-child(2) {
+    .ccm-block-page-list-page-entry:nth-child(3n) {
         max-width: 98%;
-        order: 3;
-    }
-
-    .ccm-block-page-list-page-entry:nth-child(3) {
-        order: 2;
     }
 
     .ccm-block-page-list-title a:before {
@@ -143,7 +124,7 @@
 
 @media screen and (min-width: 768px) {
     .ccm-block-page-list-title:before {
-        background: rgba(0,0,0,0);
+        background: rgba(0,0,0,0.3);
     }
 
     .ccm-block-page-list-title a:hover {
