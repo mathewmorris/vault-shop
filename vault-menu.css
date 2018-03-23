@@ -1,38 +1,40 @@
 <style>
-    .menu-wrapper {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        align-items: center;
-        list-style: none;
-    }
 
-    .menu-wrapper li a {
-        padding: 0.5em 1em;
-        color: black;
-        border: 1px solid black;
-        transition: all 0.2s ease-in-out;
-        display: flex;
-        justify-content: center;
-        align-content: center;
+.ccm-block-page-list-pages {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.ccm-block-page-list-title a {
+    padding: 0.5em 1em;
+    color: black;
+    border: 1px solid black;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 0.5em;
+    font-weight: 400;
+}
+
+.ccm-block-page-list-title a:hover {
+    color: white;
+    background: black;
+}
+
+.ccm-block-page-list-page-entry:nth-child(1) a {
+    background: black;
+    color: white;
+    cursor: default;
+}
+
+@media screen and (max-width: 720px) {
+    .ccm-block-page-list-title a {
         width: 11em;
-        margin: 0.5em;
     }
-    .menu-wrapper li a:hover {
-        color: white;
-        background: black;
-    }
-
-    .menu-wrapper li a.active {
-        background: black;
-        color: white;
-        cursor: default;
-    }
-
-    @media screen and (max-width: 540px) {
-        .menu-wrapper {
-            flex-direction: column;
-        }
-    }
+}
 
 </style>
