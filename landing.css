@@ -54,6 +54,11 @@
     background-position: bottom right;
 }
 
+.ccm-block-page-list-page-entry:nth-child(6n) .ccm-block-page-list-title {
+    background-image: url('http://vaultice.com/application/files/7914/7250/5186/home_3.jpg');
+    background-position: bottom;
+}
+
 .ccm-block-page-list-title:before {
     content: '';
     width: 100%;
@@ -111,10 +116,6 @@
     .ccm-block-page-list-pages .ccm-block-page-list-page-entry {
         height: 10em;
         max-width: 48%;
-    }
-
-    .ccm-block-page-list-page-entry:nth-child(3n) {
-        max-width: 98%;
     }
 
     .ccm-block-page-list-title a:before {
