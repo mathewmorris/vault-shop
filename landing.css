@@ -1,144 +1,148 @@
-<style>
+<style>.ccm-block-page-list-pages {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 2em auto;
+}
+
+.ccm-block-page-list-pages div {
+    width: 100%;
+    height: 100%;
+}
+
+.ccm-block-page-list-pages .ccm-block-page-list-page-entry {
+    height: 7em;
+    max-width: 80%;
+    flex-grow: 1;
+    transition: all .2s ease-in-out;
+}
+
+.ccm-block-page-list-page-entry .ccm-block-page-list-title {
+    background-color: #454545;
+    background-image: url('http://vaultice.com/application/files/6614/7250/2647/bottom_2.jpg');
+    background-repeat: no-repeat;
+    background-size: 600px;
+    background-position: top center;
+    position: relative;
+}
+
+.ccm-block-page-list-page-entry:nth-child(1) .ccm-block-page-list-title {
+    background-image: url('http://vaultice.com/application/files/6515/2547/5712/craftRocks.jpg');
+    background-position: 0;
+}
+
+.ccm-block-page-list-page-entry:nth-child(2) .ccm-block-page-list-title {
+    background-image: url('http://vaultice.com/application/files/4815/2547/5713/swag.jpg');
+    background-position: -5em;
+}
+
+.ccm-block-page-list-page-entry:nth-child(3) .ccm-block-page-list-title {
+    background-image: url('http://vaultice.com/application/files/1315/2547/5710/freezer.jpg');
+    background-position: bottom;
+}
+
+.ccm-block-page-list-page-entry:nth-child(4) .ccm-block-page-list-title {
+    background-image: url('http://vaultice.com/application/files/5215/2547/5713/barware.jpg');
+    background-position: center;
+}
+
+.ccm-block-page-list-page-entry:nth-child(5) .ccm-block-page-list-title {
+    background-image: url('http://vaultice.com/application/files/9515/2547/5711/resources.jpg');
+    background-position: bottom;
+}
+
+.ccm-block-page-list-page-entry:nth-child(6) .ccm-block-page-list-title {
+    background-image: url('http://vaultice.com/application/files/1415/2573/7489/gift.jpg');
+    background-position: -5.6em -4em;
+}
+
+.ccm-block-page-list-title:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 0;
+}
+
+.ccm-block-page-list-title a {
+    font-family: TradeGothicLTPro-BdCn20 !important;
+    text-transform: uppercase;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: all .2s ease-in-out;
+    overflow: hidden;
+}
+
+.btn-text {
+    position: relative;
+    text-shadow: 0 0 25px black;
+    font-size: 1em;
+}
+
+.btn-text:before,
+.btn-text:after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    background: white;
+    box-shadow: 0 0 30px black;
+}
+
+.btn-text:before {
+    bottom: 2em;
+}
+
+.btn-text:after {
+    top: 2em;
+}
+
+.ccm-block-page-list-description {
+    display: none;
+}
+
+@media screen and (min-width: 540px) {
     .ccm-block-page-list-pages {
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
-        align-items: center;
-        list-style: none;
-        margin: 2em auto;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        padding: 0 2em;
+        max-width: 62em;
     }
-
-    .ccm-block-page-list-pages div {
-        width: 100%;
-        height: 100%;
-    }
-
     .ccm-block-page-list-pages .ccm-block-page-list-page-entry {
-        height: 7em;
-        max-width: 80%;
-        flex-grow: 1;
-        transition: all .2s ease-in-out;
+        height: 10em;
+        max-width: 48%;
     }
+}
 
-    .ccm-block-page-list-page-entry .ccm-block-page-list-title {
-        background-color: #454545;
-        background-image: url('http://vaultice.com/application/files/6614/7250/2647/bottom_2.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: top center;
-        position: relative;
-    }
-
-    .ccm-block-page-list-page-entry:nth-child(1) .ccm-block-page-list-title {
-        background-image: url('http://vaultice.com/application/files/6515/2547/5712/craftRocks.jpg');
-        background-position: bottom;
-    }
-
-    .ccm-block-page-list-page-entry:nth-child(2n) .ccm-block-page-list-title {
-        background-image: url('http://vaultice.com/application/files/4815/2547/5713/swag.jpg');
-        background-position: top;
-    }
-
-    .ccm-block-page-list-page-entry:nth-child(3n) .ccm-block-page-list-title {
-        background-image: url('http://vaultice.com/application/files/1315/2547/5710/freezer.jpg');
-        background-position: bottom;
-    }
-
-    .ccm-block-page-list-page-entry:nth-child(4n) .ccm-block-page-list-title {
-        background-image: url('http://vaultice.com/application/files/5215/2547/5713/barware.jpg');
-        background-position: center;
-    }
-
-    .ccm-block-page-list-page-entry:nth-child(5n) .ccm-block-page-list-title {
-        background-image: url('http://vaultice.com/application/files/9515/2547/5711/resources.jpg');
-        background-position: bottom;
-    }
-
-    .ccm-block-page-list-page-entry:nth-child(6n) .ccm-block-page-list-title {
-        background-image: url('http://vaultice.com/application/files/7914/7250/5186/home_3.jpg');
-        background-position: bottom;
-    }
-
+@media screen and (min-width: 768px) {
     .ccm-block-page-list-title:before {
-        content: '';
-        width: 100%;
-        height: 100%;
-        position: absolute;
+        background: rgba(0, 0, 0, 0.25);
+    }
+    .ccm-block-page-list-title a:hover {
         background: rgba(0, 0, 0, 0.5);
-        z-index: 0;
     }
-
-    .ccm-block-page-list-title a {
-        font-family: TradeGothicLTPro-BdCn20 !important;
-        text-transform: uppercase;
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-        height: 100%;
-        position: relative;
-        transition: all .2s ease-in-out;
-        overflow: hidden;
+    .ccm-block-page-list-page-entry:hover {
+        transform: translate3d(0px, -2px, -2px) scale(1.01);
+        box-shadow: 0 4px 12px -3px black;
     }
-
     .btn-text {
-        position: relative;
+        font-size: 1.25em;
     }
+}
 
-    .btn-text:before,
-    .btn-text:after {
-        content: '';
-        width: 100%;
-        height: 3px;
-        position: absolute;
-        left: 0;
-        background: white;
-    }
+</style><script type="text/javascript">$('document').ready(()=> {
+    $('.ccm-block-page-list-title a').wrapInner('<span class="btn-text"></span>');
+}
 
-    .btn-text:before {
-        bottom: 2em;
-    }
-
-    .btn-text:after {
-        top: 2em;
-    }
-
-    .ccm-block-page-list-description {
-        display: none;
-    }
-
-    @media screen and (min-width: 540px) {
-        .ccm-block-page-list-pages {
-            flex-flow: row wrap;
-            justify-content: space-around;
-            padding: 0 2em;
-            max-width: 62em;
-        }
-        .ccm-block-page-list-pages .ccm-block-page-list-page-entry {
-            height: 10em;
-            max-width: 48%;
-        }
-    }
-
-    @media screen and (min-width: 768px) {
-        .ccm-block-page-list-title:before {
-            background: rgba(0, 0, 0, 0.3);
-        }
-        .ccm-block-page-list-title a:hover {
-            background: rgba(0, 0, 0, 0.5);
-        }
-        .ccm-block-page-list-page-entry:hover {
-            transform: translate3d(0px, -2px, -2px) scale(1.01);
-            box-shadow: 0 4px 12px -3px black;
-        }
-    }
-</style>
-<script type="text/javascript">
-    $('document').ready(() => {
-            $('.ccm-block-page-list-title a').wrapInner('<span class="btn-text"></span>');
-        }
-
-    );
+);
 </script>
