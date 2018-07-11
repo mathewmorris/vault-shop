@@ -7,23 +7,26 @@
     var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
     var collectionID = '30484725815';
 
-    switch (window.location.pathname) {
-      case '/products/craft-cocktail-rocks':
+    var re = /[^/]+$/;
+    var path = window.location.pathname.match(re)[0];
+
+    switch (path) {
+      case 'craft-cocktail-rocks':
         collectionID = '30471323703'
         break;
-      case '/products/wearables':
+      case 'wearables':
         collectionID = '30471356471'
         break;
-      case '/products/storage-freezers':
+      case 'storage-freezers':
         collectionID = '31030575159'
         break;
-      case '/products/bar-tools-more':
+      case 'bar-tools-more':
         collectionID = '30471454775'
         break;
-      case '/products/resources':
+      case 'resources':
         collectionID = '31031033911'
         break;
-      case '/products/gift-ideas':
+      case 'gift-ideas':
         collectionID = '34635448375'
         break;
       default:
@@ -51,8 +54,7 @@
     function ShopifyBuyInit() {
       var client = ShopifyBuy.buildClient({
         domain: 'vaultice.myshopify.com',
-        apiKey: '72cf5d7af5dd70a3ac182f11fb0ec62a',
-        appId: '6',
+        storefrontAccessToken: '72cf5d7af5dd70a3ac182f11fb0ec62a',
       });
 
       ShopifyBuy.UI.onReady(client).then(function (ui) {
@@ -187,6 +189,7 @@
     }
   }
         });
+        // $('.shopify-buy-frame iframe').contents().find('.shopify-buy__product').length < 1 ? $('#product-wrapper').append('<h2 style="text-align:center; padding: 5rem;">Coming Soon...</h2>') : console.log("There are products")
       });
     }
   })();
